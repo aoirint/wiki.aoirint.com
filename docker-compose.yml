@@ -22,8 +22,6 @@ services:
       DB_USER: wikijs
       DB_PASS: wikijsrocks
     restart: always
-    ports:
-      - "127.0.0.1:8121:3000"
 
   nginx:
     image: nginx:latest
