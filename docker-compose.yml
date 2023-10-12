@@ -1,9 +1,9 @@
 services:
   db:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     restart: always
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - ./volumes/postgres_14_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=wiki
       - POSTGRES_USER=wikijs
@@ -41,6 +41,3 @@ services:
       - nginx
     environment:
       - TUNNEL_TOKEN=${CLOUDFLARED_TUNNEL_TOKEN:?}
-
-volumes:
-  db-data:
