@@ -1,9 +1,9 @@
 services:
   db:
-    image: postgres:14-alpine
+    image: postgres:15
     restart: always
     volumes:
-      - ./volumes/postgres_14_data:/var/lib/postgresql/data
+      - ./volumes/postgres_15_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=wiki
       - POSTGRES_USER=wikijs
